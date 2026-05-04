@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mileni Lelis - Portfolio</title>
+    <style>
+        :root { 
+            --bg: linear-gradient(120deg, #cf4c6b, #da819c); 
+            --card-bg : #ffffff; 
+            --accent:#140205; 
+            --text: #2d2d2d;
+            font-family: 'Verdana', system-ui, sans-serif; 
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body { 
+            margin: 0; 
+            background: var(--bg); 
+            color: var(--text); 
+            min-height: 100vh; 
+            line-height: 1.6;
+        }
+        
+        .nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 1rem 2rem;
+        }
+        
+        .brand { font-weight: 700; color: #000; font-size: 1.5rem; }
+        
+        .nav a { color: #000; margin-left: 1.5rem; text-decoration: none; font-weight: bold; }
+        
+        /* Hero Section */
+        .hero { 
+            min-height: 60vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            padding: 4rem 1rem; 
+        }
+
+        /* ESTILO DA IMAGEM FOFA */
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 { font-size: 2.8rem; margin: 0.5rem 0; color: #000; }
+        
+        .hero p { font-size: 1.1rem; max-width: 600px; margin-bottom: 2rem; }
+
+        .btn {
+            background: #000;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn { transform: scale(1.05); }
+
+        /* Projetos */
+        .cards  {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card  {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card h3  { margin-top: 0; color: var(--accent); }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        img {
+  width: 200px;
+  border: 2px solid rgba(110, 13, 13, 0.781);
+}
+
+
+    </style>
+</head>
+
+<body>
+
+<header class="nav">
+    <div class="brand">Mileni Lelis</div>
+    <nav>
+     
+        <a href="https://github.com/LelisCode">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    
+    <h1>Hi - I'm Lelis</h1>
+    <img src="eu.jpeg" >
+
+    <p>
+        Junior Cloud & DevOps enthusiast. <br>
+        I build cloud native apps & deploy them reliably.
+    </p>
+    <a class="btn" href="https://github.com/LelisCode">View Projects</a>
+</section>
+
+<section id="projects" class="cards">
+    <article class="card">
+        <h3>Project A</h3>
+        <p>In the cloud world, it's necessary to know how to place HTML and CSS files inside S3 buckets and configure them within CloudFront to create a static website.</p>
+    </article>
+
+    <article class="card">
+        <h3>Project B</h3>
+        <p>In the cloud environment, we can download Docker through the command-line interface. This system, using containers, will house your code and post it from a server. The Dockerfile will then provide the perfect recipe for creating your website,Like ready-made Docker containers, we recommend continuous integration and deployment to keep the website evolving.</p>
+    </article>
+
+    <article class="card">
+        <h3>Project C</h3>
+        <p>In the cloud, using Terraform, we can create complete servers with just a few lines of code.</p>
+    </article>
+</section>
+
+<footer id="contact">
+    <p>
+        ©2026 Mileni Lelis —
+        <a href="mailto:lelismileni0@gmail.com" style="color: #000;">lelismileni0@gmail.com</a>
+    </p>
+</footer>
+
+</body>
+</html>
