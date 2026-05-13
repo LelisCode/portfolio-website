@@ -37,4 +37,4 @@ sudo nano /etc/nginx/sites-available/docker-app
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
     }
-}
+ }
