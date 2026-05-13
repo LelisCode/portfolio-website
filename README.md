@@ -29,13 +29,12 @@ sudo systemctl enable nginx
 sudo nano /etc/nginx/sites-available/docker-app
 
 
-      serve {
-                listen 80;
+      server {
+    listen 80;
 
-                location / {
-                    proxy_pass: http//localhost:8080;
-                    proxy_set_header: host $host;
-                    proxy_set_header: X-Real-IP $remote_addr;
-
-                }
-            }
+    location / {
+        proxy_pass http://localhost:8080;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
